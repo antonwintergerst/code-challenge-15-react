@@ -1,7 +1,7 @@
 import React from 'react'
-import PasswordInput from './PasswordInput'
+import Board from './Board'
 
-class App extends React.Component {
+export default class App extends React.Component {
 
   constructor(props) {
     super(props)
@@ -9,10 +9,8 @@ class App extends React.Component {
 
   render() {
     return <div>
-      
+      <Board />
     </div>
   }
 
 }
-
-module.exports = App
