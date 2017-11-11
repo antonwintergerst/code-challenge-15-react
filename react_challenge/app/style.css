@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+}
+
+.board {
+  height: 600px;
+  width: 600px;
+  background-color: white;
+  margin: 0 auto;
+}
+
+.piece1,
+.piece2, 
+.piece3, 
+.piece4, 
+.piece5, 
+.piece6, 
+.piece7, 
+.piece8 {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  font-size: 5em;
+  padding: 0px;
+  margin: 0px;
+  line-height: 200px;
+  background-color: gold;
+}
+
+.pieceblank {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  text-align: center;
+  font-size: 5em;
+  padding: 0px;
+  margin: 0px;
+  line-height: 200px;
+  background-color: white;
+  color: white;
+}
