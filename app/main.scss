@@ -1,0 +1,56 @@
+// Colors
+$background_color: dodgerblue;
+$board: white;
+$squares: mistyrose;
+
+body
+{
+  background-color: $background_color;
+}
+
+.title
+{
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#app
+{
+  display: flex;
+  justify-content: center;
+
+  .board-container
+  {
+    display: flex;
+    align-self: center;
+    background: $board;
+    flex-wrap: wrap;
+    min-height: 70vh;
+    margin: 0 auto;
+    width: 600px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    .square
+    {
+      display: flex;
+      align-items: center;
+      background: $squares;
+      border: 1px solid black;
+      font-size: 3em;
+      flex-direction: column;
+      height: auto;
+      justify-content: center;
+      width: 33%;
+    }
+
+    .empty
+    {
+      background: none;
+      opacity: 0;
+    }
+  }
+}
