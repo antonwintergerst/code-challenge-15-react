@@ -66,10 +66,10 @@ export default class Puzzle extends React.Component
     }
   }
 
-  // componentWillMount()
-  // {
-  //   randomiseSquares(this.state.squares)
-  // }
+  componentWillMount()
+  {
+    randomiseSquares(this.state.squares)
+  }
 
   checkMove(numSquare, indexOfSquare, blankSquare, indexOfBlankSquare)
   {
