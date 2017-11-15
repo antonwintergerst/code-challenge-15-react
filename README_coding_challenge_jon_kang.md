@@ -65,7 +65,7 @@ _____
 - Always plan first!  
 > I did plan a bit and had a general idea how the game works but I should've written out more pseudocode and drawing the flowchart to work out the winning logic and game flow as I had to change logic multiple times and even had to change the data structure.  
 
-**Image Goes here**
+![flowchart](https://raw.githubusercontent.com/Kangb0tmang/code-challenge-15-react/jon_kang_code_test/flowchart.jpg)
 
 - Debugger is your friend  
 > Utilising the debugger saved me from more headaches especially doing something as simple as writing the logic to win the game and identify the current state or the values and coordinates of the empty and numbered squares.
