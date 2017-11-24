@@ -1,46 +1,62 @@
 import React from 'react'
 // import Tile from './Tile'
 
-export default class Game extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            tiles: [
-            {
-              display: '1'  
-            },
-            {
-              display: '2'  
-            },
-            {
-              display: '3'  
-            },
-            {
-              display: '4'  
-            },
-            {
-              display: '5'  
-            },
-            {
-              display: '6'  
-            },
-            {
-              display: '7'  
-            },
-            {
-              display: '8'  
-            },
-            {
-              display: 'blank'  
-            }]
-        }
-    }
 
-    render() {
-        return (
-            <div>
-              <p> board goes here </p>
-            </div>
-        )
+export default class Game extends React.Component {
+  constructor(props) {
+    super(props)
+    this.createTile = this.createTile.bind(this)
+    this.moveTile = this.moveTile.bind(this)
+    this.state = {
+      tiles: [
+      {
+        displayed: '1'  
+      },
+      {
+        displayed: '2'  
+      },
+      {
+        displayed: '3'  
+      },
+      {
+        displayed: '4'  
+      },
+      {
+        displayed: '5'  
+      },
+      {
+        displayed: '6'  
+      },
+      {
+        displayed: '7'  
+      },
+      {
+        displayed: '8'  
+      },
+      {
+        displayed: 'blank'  
+      }]
     }
+  }
+
+  moveTile(event) {
+    console.log(event.target)
+  }
+
+  createTile(tileObj, index) {
+    return <div
+    className="tile"
+    key={index}
+    onClick={(event) => this.moveTile(event)}>
+      <p>{tileObj.displayed}</p>
+    </div>
+  }
+
+  render() {
+    return (
+      <div className="board">
+         {this.state.tiles.map(this.createTile)}
+      </div>
+    )
+  }
 } 
