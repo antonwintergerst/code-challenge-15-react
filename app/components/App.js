@@ -1,20 +1,20 @@
 import React from 'react'
+import Game from './Game'
 
 class App extends React.Component {
 
   constructor(props) {
-    super(props);
-    this.state = {
-
-    }
+    super(props)
   }
 
   render() {
-    return <div>
-      <h1>hello world</h1>
-    </div>
+    return (
+      <div>
+        <h1> 15 </h1>
+        <Game />
+      </div>
+    )
   }
-
-}
+}   
 
 module.exports = App

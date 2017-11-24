@@ -1,4 +1,3 @@
-
 require('./style.css')
 
 import React from 'react'
