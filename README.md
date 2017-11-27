@@ -1,6 +1,6 @@
 [Find the hosted app here](https://lyleinnes.github.io/code-challenge-15-react/)
 
-# To run the app localy in development :
+# To run the app localy in development:
 
 * Clone this repo to your local directory
 ```
@@ -21,4 +21,31 @@ npm start
 * View the app in your browser:
 ```
 http://localhost:8080/
+```
+
+## Things to note:
+
+* It is possible that this puzzle will load a set of 'tiles' that results in an unsolvable puzzle. For the purposes of this coding challenge I have not attempted to filter out the un-solvable tile combinations. If you reach a point where there are only two tiles that need to be swapped to complete the puzzle, it is unsolvalble. Reset and try again. For example, the following two puzzles are unsolvable:
+```
++--------------------
+|     ||     ||     |
+|  1  ||  2  ||  3  |
++--------------------
+|     ||     ||     |
+|  4  ||  5  ||  6  |
++--------------------
+|     ||     |      |
+|  8  ||  7  |      |
++-------------------+
+or
++--------------------
+|     ||     ||     |
+|  2  ||  1  ||  3  |
++--------------------
+|     ||     ||     |
+|  4  ||  5  ||  6  |
++--------------------
+|     ||     |      |
+|  7  ||  8  |      |
++-------------------+
 ```
