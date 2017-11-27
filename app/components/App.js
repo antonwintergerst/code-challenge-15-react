@@ -17,6 +17,7 @@ export default class App extends React.Component {
     }
   }
 
+  // shuffle the array of tiles before rendering
   componentWillMount() {
     var tiles = this.state.tiles
     tiles = _.shuffle(tiles)
@@ -25,6 +26,7 @@ export default class App extends React.Component {
     })
   }
 
+  // reshuffle the array of tiles and set win to false
   reset() {
     var tiles = this.state.tiles;
     tiles = _.shuffle(tiles);
@@ -34,6 +36,8 @@ export default class App extends React.Component {
     })
   }
 
+  // check for equality between the contents of tiles array and win scenario array
+  // set win to true if equal
   setWin() {
     var tiles = this.state.tiles.join()
     var winScenario = this.state.winScenario.join()
@@ -44,6 +48,7 @@ export default class App extends React.Component {
     }
   }
 
+  // swap the values of the clicked tile and empty tile, then run setWin to check if player has won
   swapTiles(emptyTile, clickedTile) {
     var tiles = this.state.tiles;
     var clickedValue = tiles[clickedTile];
@@ -56,6 +61,8 @@ export default class App extends React.Component {
     this.setWin();
   }
 
+  // only runs while player has not won
+  // this checks to see if the empty tile is within moving distance of the clicked tile, if it is, it passes the indexes of the two tiles into the swapTiles function
   findSurroundingTiles(clickedIndex, tilesArray) {
     if (this.state.win === false) {
       if (clickedIndex - 3 >= 0) {
@@ -92,6 +99,8 @@ export default class App extends React.Component {
     }
   }
 
+  // creates a div element for each element in the 'tiles' array within state
+  // each div created has a click listener that calls the findSurroundingTiles function and passes in its own index value as well as the full array of tiles from state
   createTile(tile, indexOfTile, tilesArr) {
     return <div
     className="tile"
@@ -101,6 +110,10 @@ export default class App extends React.Component {
     </div>
   }
 
+  // render a button to allow players to reset the puzzle
+  // render the board that the puzzle is contained within
+  // the array of 'tiles' in the state are mapped to divs using the createTile function
+  // render a win message only when winstate is true
   render() {
     var winState = this.state.win;
     return (
