@@ -13,7 +13,7 @@ export default class App extends React.Component {
     this.state = {
       win: false,
       winScenario: ['1','2','3','4','5','6','7','8',''],
-      tiles: ['1','2','3','4','5','6','7','8','']
+      tiles: ['1','2','3','4','5','6','7','','8']
     }
   }
 
@@ -41,7 +41,6 @@ export default class App extends React.Component {
       this.setState({
         win: true
       })
-      this.showWin()
     }
   }
 
@@ -105,11 +104,13 @@ export default class App extends React.Component {
   render() {
     var winState = this.state.win;
     return (
-      <div className="board">
-         {this.state.tiles.map(this.createTile)}
-         {winState && <p>you win, well done</p>}
-         <button onClick={() => this.reset()} > reset </button>
-      </div>
+      <div>
+        <button onClick={() => this.reset()} > reset </button>
+        <div className="board">
+          {this.state.tiles.map(this.createTile)}
+        </div>
+        {winState && <p>you win, well done</p>}
+      </div>     
     )
   }
 } 
