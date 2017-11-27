@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.board {
+  background-color: grey;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 306px;
+  height: 306px;
+  margin: 20px;
+}
+
+.tile {
+  background-color: lemonchiffon;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  margin: 1px;
+}
